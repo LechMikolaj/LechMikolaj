@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @LechMikolaj
 - 👀 I’m interested in programming music electronic chess   
-- 🌱 I’m currently learning ...Python C++ Java
+- 🌱 I’m currently learning ...Python C++ Java Php
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
