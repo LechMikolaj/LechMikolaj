@@ -57,3 +57,23 @@ void app_main(void)
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
+const int pwmPin = 5;      // GPIO pin for PWM output
+const int pwmChannel = 0;  // LEDC channel (0–15)
+const int pwmFreq = 40000; // 40 kHz
+const int pwmResolution = 8; // bits (0–255 duty)
+
+void setup() {
+  // Configure the LEDC PWM channel
+  ledcSetup(pwmChannel, pwmFreq, pwmResolution);
+
+  // Attach the GPIO pin to the PWM channel
+  ledcAttachPin(pwmPin, pwmChannel);
+
+  // Set duty: 50% → 255/2 = 127
+  int duty = 127;
+  ledcWrite(pwmChannel, duty);
+}
+
+void loop() {
+  // Nothing needed here
+}
